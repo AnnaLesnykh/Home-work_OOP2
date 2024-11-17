@@ -16,7 +16,7 @@ with open('recepies.txt', encoding='utf-8') as file:
         for p in range(int(ingredients_count)):
             recepie = file.readline().strip().split(' | ')
             product, quantity, word = recepie
-            ingredients.append({'product': product, 'quantity': quantity, 'measure': word})
+            ingredients.append({'product': product, 'quantity': int(quantity), 'measure': word})
         file.readline()
         cook_book[recepie_name] = ingredients
 
@@ -37,7 +37,7 @@ def get_shop_list_by_dishes(person_count: int, dishes: list):
     print(result)
 
 
-get_shop_list_by_dishes(2, ['Запеченный картофель', 'Омлет'])
+get_shop_list_by_dishes(2, ['Омлет', 'Омлет'])
 
 
 # Задача3
